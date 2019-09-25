@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #search {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            height: 30px;
+            background: #2f3640;
+            border-radius: 40px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .search-txt {
+            border: none; /*去除边框*/
+            background: none; /*去除背景*/
+            outline: none; /*去除边框线*/
+            float: left;
+            padding: 0;
+            color: white;
+            font-size: 16px;
+            transition: 0.4s;
+            line-height: 30px;
+            width: 0;
+        }
+
+        a {
+            /*弹性布局*/
+            display: flex;
+            justify-items: center;
+            align-items: center;
+
+            width: 30px;
+            height: 30px;
+            background: url("./img/icons.png") -658px -723px;
+            border-radius: 50%;
+            float: right;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background: url("./img/icons.png") -723px -723px;
+            animation: flash 500ms linear;
+        }
+
+        #search:hover > .search-txt {
+            width: 215px;
+            padding: 0 6px;
+        }
+
+        @keyframes flash {
+            50% {
+                transform: scale(1.5);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="search">
+    <a href="#"></a>
+    <input class="search-txt" type="text" id="search-box" placeholder="Type to search">
+</div>
+</body>
+</html>
